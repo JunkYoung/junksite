@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>spygame</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Question List</a></h1>
+        </div>
+        {% for q in questions %}
+    <div>
+        <p>published: {{ q.published_date }}</p>
+        <h1><a href="">{{ q.title }}</a></h1>
+        <p>{{ q.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    </body>
+</html>
